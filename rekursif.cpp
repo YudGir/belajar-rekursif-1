@@ -2,16 +2,15 @@
 
 using namespace std;
 
-int jumlahAngkaUserHitungMundur = 0;
-
-void hitungMundur(int n) {
+int hitungMundur(int n) {
+    int jumlahAngkaUserHitungMundur = 0;
     if (n == 0) {
-        return;
+        return 0;
     } 
 
     cout << n << " ";
 
-    hitungMundur(n-1);
+    return n + hitungMundur(n-1);
     jumlahAngkaUserHitungMundur+=n;
 }
 
@@ -20,8 +19,8 @@ int main () {
     cout << "Masukkan angka yang mau Anda lihat hitung-mundurnya: ";
     cin >> angkaUser;
 
-    hitungMundur(angkaUser);
+    int hasil = hitungMundur(angkaUser);
     cout << endl;
-    cout << "Sum of given: " << jumlahAngkaUserHitungMundur << endl;
+    cout << "Sum of given: " << hasil << endl;
     return 0;
 }
