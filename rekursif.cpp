@@ -3,7 +3,6 @@
 using namespace std;
 
 int hitungMundur(int n) {
-    int jumlahAngkaUserHitungMundur = 0;
     if (n == 0) {
         return 0;
     } 
@@ -11,7 +10,6 @@ int hitungMundur(int n) {
     cout << n << " ";
 
     return n + hitungMundur(n-1);
-    jumlahAngkaUserHitungMundur+=n;
 }
 
 int main () {
